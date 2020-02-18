@@ -1,5 +1,8 @@
 <input class="form-control"
-        [(ngModel)] = "userName">
-<p class="col-xs-12">{{ userName }}</p>
+        [(ngModel)] = "username">
+<p class="col-xs-12">{{ username }}</p>
 <button class="btn btn-primary"
-        [disabled]="emptyInput()">Button</button>
+        [disabled]="isInputEmpty()"
+        (click)="resetUsername()"
+        >
+        Button</button>

@@ -6,22 +6,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./username.component.css']
 })
 export class UsernameComponent implements OnInit {
-  userName = "username";
-  emptyUserName = false;
+  username = "username";
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  ontype(){
-    this.userName = (<HTMLInputElement>event.target).value;
+  resetUsername(){
+    this.username = "username";
   }
 
-  emptyInput(){
-    if(this.userName == ""){
-      return true;
-    }
-    return false;
+  isInputEmpty(){
+    return this.username.length > 0;
   }
 
 
